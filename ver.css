@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(211, 199, 159);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contenedor {
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+}
+.contenedor >div,
+.contenedor .header,
+.contenedor .main,
+.contenedor .footer{
+	padding: 20px;
+}
+.contenedor .header{
+	grid-area: header;
+    
+}
+.contenedor .main{
+    min-height: 100%;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content:space-around;
+
+    grid-area: main;
+}
+.contenedor .footer{
+	background: #700505;
+	color: #fff;
+    background-size: cover;
+	grid-area: footer;
+}
+
+@media screen and (max-width:768px) {
+    .contenedor{
+        grid-template-areas:
+        "header header"
+	    "main main"
+        "main main"
+        "main main"
+		"footer footer" ;
+    }
+}
+
+
+
+
+.encabezado{
+    background-image: url(/media/Dormitorio-verde-foto4.jpg);
+    height: 90vh;
+    background-size: cover;
+}
+.logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.menu{
+    background: linear-gradient(0deg, rgb(10, 57, 58) 0%, rgb(124, 56, 56) 64%);
+    background-size: cover;
+    list-style: none;
+    background-color: rgb(26, 25, 25);
+    text-align: center;
+}
+.menu ul{
+    list-style: none;
+    padding: 1.2rem;
+}
+.menu ul li{
+    display: inline-block;
+    background-color: rgba(255, 228, 196, 0.822);
+    position: relative;
+    font-size: 1.3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+.menu ul li a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration:overline;
+    display: inline-block;
+    color: rgb(156, 126, 87);
+}
+.menu ul li:hover ul{
+    display: block;
+    background-color: rgba(184, 154, 74, 0.582);
+}
+.menu ul li a:hover{
+    color: #503737;
+    font-weight:bold;
+}
+.promociones{
+    display: flex;
+    flex-direction:column ;
+    overflow: auto;
+    color: black;
+}
+.promociones h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+    padding: 2rem;
+}
+.promocionesyproductos{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenprom{
+    display:flex;
+    flex-direction: row;
+    margin-left: 4.3rem;
+    gap: 5rem;
+}
+
+.prom{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 15rem; 
+    height: 18rem;
+    transition: all 1s;
+}
+.prom:hover{
+    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+}
+.prom img{
+    width: 15rem;
+    height: 15rem;
+}
+.textos{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    color:black;
+    text-decoration: solid;
+} 
+.ofertas{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkred;
+}
+.contenprod{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+.productos{
+    display: flex;
+    flex-direction:row ;
+    overflow: auto;
+    color: black;
+}
+.productos h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
+.prod{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    width: 15rem; 
+    height: 18rem;
+    transition: all 1s;
+}
+.prod:hover{
+    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+}
+.prod img{
+    width: 15rem;
+    height: 15rem;
+}
+
+.centrar h1{
+    position: relative;
+}
+.img{
+    position: absolute;
+}
+.seccion3{
+    display:flex;
+    flex-direction: row;
+}
+
+.padre{
+    width: 90% ;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "endymas prodmad"
+    "endymas esmsint"
+    "latex revtext"
+    "membr revtext" ;
+}
+.hijos{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    width: 550px auto;
+    height: 300px auto;
+}
+.endymas{
+    background-color: rgb(255, 0, 13);
+    grid-area: endymas;
+}
+.prodmad{
+    background-color: blueviolet;
+    grid-area: prodmad;
+}
+.esmsint{
+    background-color: rgb(39, 20, 20);
+    grid-area: esmsint;
+}
+.latex{
+    background-color: rgb(67, 143, 179);
+    grid-area:latex ;
+}
+.membr{
+    background-color: rgb(221, 145, 168);
+    grid-area: membr;
+}
+.revtext{
+    background-color: rgb(47, 199, 47);
+    grid-area: revtext;
+}
+@media  screen and (max-width:760px){
+    .seccion3{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas:
+        "endymas"
+        "endymas" 
+        "prodmad"
+        "esmsint"
+        "latex" 
+        "membr"
+        "revtext"
+        "revtext" ;
+    }
+}
+
+/* !--Accesorios--! */
+.bodyAcce{
+    background-color:rgb(211, 199, 159);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.accesorios{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.prodA{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 16rem; 
+}
+.prodA:hover{
+    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+-moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+}
+.prodA img{
+    width: 16rem;
+    height: 16rem;
+}
+.textosA{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    color:black;
+    text-decoration: solid;
+} 
+
+/* !--Contactos--! */
+.bodyCon{
+    background-color:rgb(211, 199, 159);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.form{
+    display: flex;
+    flex-direction: wrap;
+    justify-content:center;
+    text-align: center;
+    
+}
+.form h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
