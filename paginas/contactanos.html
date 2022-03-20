@@ -18,16 +18,16 @@
     <header class="header">
         <!--barra de navegación-->
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light  bg-secondary">
+            <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
                 <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../img/pepito's Logo 2.jpg" width="200px" alt="logo pepitos"></a>
+                <a class="navbar-brand" href="#"><img src="/img/pepito's Logo 2.jpg" width="200px" alt="logo pepitos"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../nuevo.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
@@ -39,16 +39,22 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Paginas/accesorios.html">Accesorios</a>
+                        <a class="nav-link" href="/paginas/accesorios.html">Accesorios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Paginas/contactanos.html">Contactanos</a>
+                        <a class="nav-link" href="/paginas/contactanos.html">Contactanos</a>
                     </li>
                     </ul>
                     <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
-                    <button class="btn btn-outline-secondary" type="submit"><a href="lupa"><i class="bi bi-search"></i></a></button>
-                    <button class="btn btn-outline-secondary" type="submit"><a href="carrito"><i class="bi bi-cart"></i></a></button>
+                    <div class="aninav tran1 scale">
+                        <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search">
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary" type="submit"><a href="lupa"><i class="bi bi-search fs-4"></i></a></button>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary" type="submit"><a href="carrito"><i class="bi bi-cart fs-4"></i></a></button>
+                    </div>
                     </form>
                 </div>
                 </div>
@@ -91,12 +97,13 @@
                     </article>
                 </div>
             </section>
-        </form> <br>
+        </form> 
         <section class="maps">
-            <h2 class="text-center h3 mt-6">Encontranos</h2>
+            <h2 class="text-center h3 mt-6">Encontranos en</h2>
             <article class="col-md-6">
                 <iframe src="https://www.google.com.ar/maps/"
-               
+                width="550"
+                height="547"
                 style= "border: 0"
                 allowfullscreen=""
                 loading="lazy">
@@ -105,13 +112,19 @@
         </section>
     </main>
     <!--pie de pagina-->
-    <footer class="footer">
+    <footer class="anchofooter">
         <div class="redes">
-            <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://mail.google.com/" target="_blank"><i class="bi bi-envelope-fill"></i>email: pepitospinturas272@gmail.com</a>
-            <a href=""><i class="bi bi-telephone-fill"></i>293874773747</a>
+            <div class="caja anim1 rotate">
+                <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook fs-2"></i></a>
+            </div>
+            <div class="caja anim2 rotate">
+                <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram fs-2"></i></a>
+            </div>
+            <div class="caja anim3 rotate">
+                <a href="https://www.whatsapp.com/" target="_blank"><i class="bi bi-whatsapp fs-2"></i></a>
+            </div>
+            <a href="https://mail.google.com/" target="_blank"><i class="bi bi-envelope-fill fs-4"></i>pepitospintureria222@gmail.com</a>
+            <a href=""><i class="bi bi-telephone-fill fs-4"></i>293874773747</a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

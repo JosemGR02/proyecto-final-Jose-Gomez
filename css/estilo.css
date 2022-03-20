@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background-color:rgb(211, 199, 159);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: #fff;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 /* !--contenedor index--! */
 .contenedor {
@@ -40,7 +40,7 @@ body{
     grid-area: main;
 }
 .contenedor .footer{
-	background: #700505;
+	background-color: rgb(10, 5, 39);
 	color: #fff;
     background-size: cover;
 	grid-area: footer;
@@ -128,8 +128,8 @@ body{
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    width: 15rem; 
-    height: 18rem;
+    width: 16rem; 
+    height: 21rem;
     transition: all 1s;
 }
 .prom:hover{
@@ -139,10 +139,10 @@ body{
 }
 .prom img{
     width: 15rem;
-    height: 15rem;
+    height: 16rem;
 }
 .textos{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     color:black;
@@ -156,7 +156,7 @@ body{
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    margin-left: 4.3rem;
+    margin-left: 4.2rem;
     gap: 5rem;
 }
 .productos{
@@ -174,8 +174,8 @@ body{
     display:flex;
     flex-wrap: wrap;
     flex-direction:row;
-    width: 15rem; 
-    height: 18rem;
+    width: 16rem; 
+    height: 21rem;
     transition: all 1s;
 }
 .prod:hover{
@@ -185,7 +185,7 @@ body{
 }
 .prod img{
     width: 15rem;
-    height: 15rem;
+    height: 16rem;
 }
 
 .img{
@@ -194,7 +194,7 @@ body{
 .seccion3{
     display:flex;
     flex-direction: row;
-    margin-left: -1.5rem;
+    margin-left: 1.4rem;
     gap: 5rem;
 }
 
@@ -227,7 +227,7 @@ body{
 }
 .prodmad{
     background-color: blueviolet;
-    background-image: url(/media/griddd/madera.jpg);
+    background-image: url(/media/griddd/maderaffff.jpg);
     text-align: unset;
     grid-area: prodmad;
 }
@@ -257,7 +257,7 @@ body{
     text-align:unset;
     grid-area:latex ;
 }
-@media  screen and (max-width:760px){
+@media  screen and (min-width:760px){
     .seccion3{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6 1fr);
@@ -272,10 +272,15 @@ body{
         "revtext" ;
     }
 }
-
+.footer{
+    background-color: rgb(10, 5, 39);
+    color: rgb(250, 250, 250);
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /* !--Accesorios--! */
 .bodyAcce{
-    background-color:rgb(211, 199, 159);
+    background-color: #fff;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 h1{
@@ -286,22 +291,24 @@ h1{
     display: flex;
     flex-direction:row ;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
-.prodA{
+.cardA{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-items: space-around;
     width: 16rem; 
+    height: 21rem;
+    transition: all 1s;
 }
-.prodA:hover{
+.cardA:hover{
     box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
 -webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
 -moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
 }
-.prodA img{
-    width: 16rem;
+.cardA img{
+    width: 15rem;
     height: 16rem;
 }
 .textosA{
@@ -311,10 +318,37 @@ h1{
     color:black;
     text-decoration: solid;
 } 
-
+.footer{
+    background-color: rgb(10, 5, 39);
+    color: rgb(250, 250, 250);
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+@media  screen and (min-width:760px){
+    .accesorios{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas:
+        "cardA cardA cardA"
+        "cardA cardA cardA"
+        "cardA cardA cardA"
+        "cardA cardA" ;
+    }
+}
+@media  screen and (min-width:570px){
+    .accesorios{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas:
+        "cardA cardA"
+        "cardA cardA"
+        "cardA cardA"
+        "cardA cardA" ;
+    }
+}
 /* !--Contactos--! */
 .bodyCon{
-    background-color:rgb(211, 199, 159);
+    background-color: #fff;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 .form{
@@ -322,8 +356,13 @@ h1{
     flex-direction: wrap;
     justify-content:center;
     text-align: center;
-    
 }
 .form h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer{
+    background-color: rgb(10, 5, 39);
+    color: rgb(250, 250, 250);
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
