@@ -40,20 +40,29 @@ body{
     grid-area: main;
 }
 .contenedor .footer{
-	background-color: rgb(10, 5, 39);
-	color: #fff;
-    background-size: cover;
 	grid-area: footer;
 }
 
-@media screen and (max-width:768px) {
-    .contenedor{
+@media screen and (min-width:760px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(5, auto);
         grid-template-areas:
         "header header"
 	    "main main"
         "main main"
         "main main"
 		"footer footer" ;
+    }
+}
+@media screen and (max-width:760px) {
+    .promocionesyproductos {
+        grid-template-columns: 1fr ;
+	    grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "contenprom"
+	    "contenprod"
+        "seccion3" ;
     }
 }
 
@@ -131,11 +140,13 @@ body{
     width: 16rem; 
     height: 21rem;
     transition: all 1s;
+    padding: 5px;
+    margin: 1.5rem;
 }
 .prom:hover{
-    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
 }
 .prom img{
     width: 15rem;
@@ -177,11 +188,13 @@ body{
     width: 16rem; 
     height: 21rem;
     transition: all 1s;
+    margin: 1.5rem;
+    padding: 5px;
 }
 .prod:hover{
-    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
 }
 .prod img{
     width: 15rem;
@@ -215,9 +228,11 @@ body{
     border-radius: 3px;
     width: 550px auto ;
     height: 300px auto;
+    transition: all 1s;
 }
+
 .endymas{
-    background-color: rgb(255, 0, 13);
+    color: black;
     width: 550px;
     height: 300px;
     background-image: url(/media/griddd/masilla.jpg);
@@ -225,41 +240,41 @@ body{
     grid-area: endymas;
 }
 .prodmad{
-    background-color: blueviolet;
+    color: black;
     background-image: url(/media/griddd/maderaffff.jpg);
-    text-align: unset;
+    text-align: end;
     grid-area: prodmad;
 }
 .esmsint{
-    background-color: rgb(39, 20, 20);
+    color: black;
     background-image: url(/media/griddd/esmalteSintetico.jpg);
-    text-align: justify;
+    text-align: end;
     grid-area: esmsint;
 }
 .membr{
-    background-color: rgb(221, 145, 168);
+    color: black;
     background-image: url(/media/griddd/membrana\ impermeable.jpg);
-    text-align:initial;
+    text-align:end;
     grid-area: membr;
 }
 .revtext{
-    background-color: rgb(47, 199, 47);
+    color: black;
     background-image: url(/media/griddd/revestimientogggggg.jpg);
-    text-align:right;
+    text-align:end;
     grid-area: revtext;
 }
 .latex{
-    background-color: rgb(67, 143, 179);
+    color: black;
     width: 550px;
     height: 300px;
     background-image: url(/media/griddd/latex-exterior\ eww.jpg);
     text-align:unset;
     grid-area:latex ;
 }
-@media  screen and (min-width:760px){
-    .seccion3{
+@media screen and (min-width:570px) {
+    .seccion3 {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6 1fr);
+        grid-template-rows: repeat(8, 1fr);
         grid-template-areas:
         "endymas"
         "endymas" 
@@ -270,12 +285,6 @@ body{
         "revtext"
         "revtext" ;
     }
-}
-.footer{
-    background-color: rgb(10, 5, 39);
-    color: rgb(250, 250, 250);
-    background-size: cover;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /* !--Accesorios--! */
 .bodyAcce{
@@ -300,6 +309,7 @@ h1{
     width: 16rem; 
     height: 21rem;
     transition: all 1s;
+    margin: 1.5rem;
 }
 .cardA:hover{
     box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
@@ -317,13 +327,8 @@ h1{
     color:black;
     text-decoration: solid;
 } 
-.footer{
-    background-color: rgb(10, 5, 39);
-    color: rgb(250, 250, 250);
-    background-size: cover;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-@media  screen and (min-width:760px){
+
+@media screen and (min-width:760px) {
     .accesorios{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(4 1fr);
@@ -334,7 +339,7 @@ h1{
         "cardA cardA" ;
     }
 }
-@media  screen and (min-width:570px){
+@media screen and (min-width:570px) {
     .accesorios{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(4 1fr);
@@ -359,6 +364,26 @@ h1{
 .form h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+@media  screen and (min-width:760px){
+    .form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "row maps" ;
+    }
+}
+@media  screen and (min-width:570px){
+    .row{
+        .g-col-12
+    }
+    .form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "row"
+        "maps" ;
+    }
+}
 
 /* !--Bootstrap--! */
 .imcaru{
@@ -368,15 +393,11 @@ h1{
 footer{
     width: 100%;
     height: 100px;
-    margin-top: 0px;
     display: flex;
     justify-content: center;
     background-color: rgb(10, 5, 39);
     color: rgb(250, 250, 250);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.anchofooter{
-    margin-top: 30px;
 }
 .redes{
     display: inline-block;
@@ -429,4 +450,9 @@ footer{
 }
 .tran1:hover{
     width: 200px;
+}
+.btn-lav{
+    color: #fff;
+    background-color: rgb(1, 74, 134) ;
+    border-color: rgb(1, 74, 134) ;
 }
