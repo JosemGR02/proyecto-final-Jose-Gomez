@@ -4,10 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #fff;
+    background-color: rgb(39, 78, 102);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-/* !--contenedor index--! */
+/* !--contenedor pag principal--! */
 .contenedor {
 	width: 100%;
 	display: grid;
@@ -36,7 +36,7 @@ body{
 	justify-content:space-around;
     grid-area: main;
 }
-.contenedor .footer{
+.contenedor .anchofooter{
 	grid-area: footer;
 }
 
@@ -122,6 +122,12 @@ body{
     color: #503737;
     font-weight:bold;
 }
+.promocionesyproductos{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .promociones{
     display: flex;
     flex-direction:column ;
@@ -133,12 +139,7 @@ body{
     text-align:center;
     padding: 2rem;
 }
-.promocionesyproductos{
-    display: flex;
-    flex-direction:row ;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 .contenprom{
     display:flex;
     flex-direction: row;
@@ -155,6 +156,7 @@ body{
     transition: all 1s;
     padding: 5px;
     margin: 1.5rem;
+    background-color: #fff;
 }
 .prom:hover{
     box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
@@ -188,6 +190,7 @@ body{
     flex-direction:column ;
     overflow: auto;
     color: black;
+    align-items: center;
 }
 .productos h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -203,6 +206,7 @@ body{
     transition: all 1s;
     margin: 1.5rem;
     padding: 5px;
+    background-color: #fff;
 }
 .prod:hover{
     box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
@@ -216,10 +220,11 @@ body{
 .img{
     position: absolute;
 }
+
 .seccion3{
     display:flex;
     flex-direction: row;
-    margin-left: -8rem;
+    margin-left: -1.2rem;
     gap: 5rem;
 }
 
@@ -230,25 +235,25 @@ body{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-    "endymas prodmad"
-    "endymas esmsint"
-    "revtext latex"
-    "membr latex" ;
+        "endymas prodmad"
+        "endymas membr"
+        "revtext latex"
+        "esmsint latex" ;
 }
 .hijos{
     margin: 5px;
     padding: 5px;
     border-radius: 3px;
-    width: 550px auto ;
-    height: 300px auto;
+    width: 700px auto ;
+    height: 450px auto;
     transition: all 1s;
 }
 
 .endymas{
     color: black;
     width: 550px;
-    height: 300px;
-    background-image: url(/media/griddd/masilla.jpg);
+    height: 400px;
+    background-image: url(/media/griddd/masilla2.jpg);
     text-align: end;
     grid-area: endymas;
 }
@@ -258,17 +263,17 @@ body{
     text-align: end;
     grid-area: prodmad;
 }
-.esmsint{
-    color: black;
-    background-image: url(/media/griddd/esmalteSintetico.jpg);
-    text-align: end;
-    grid-area: esmsint;
-}
 .membr{
     color: black;
     background-image: url(/media/griddd/membrana\ impermeable.jpg);
     text-align:end;
     grid-area: membr;
+}
+.esmsint{
+    color: black;
+    background-image: url(/media/griddd/esmalteSintetico.jpg);
+    text-align: end;
+    grid-area: esmsint;
 }
 .revtext{
     color: black;
@@ -279,7 +284,7 @@ body{
 .latex{
     color: black;
     width: 550px;
-    height: 300px;
+    height: 400px;
     background-image: url(/media/griddd/latex-exterior\ eww.jpg);
     text-align:unset;
     grid-area:latex ;
@@ -289,24 +294,25 @@ body{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, 1fr);
         grid-template-areas:
-        "endymas"
-        "endymas" 
-        "prodmad"
-        "esmsint"
-        "latex" 
-        "membr"
-        "revtext"
-        "revtext" ;
+            "endymas"
+            "endymas" 
+            "prodmad"
+            "esmsint"
+            "latex" 
+            "membr"
+            "revtext"
+            "revtext" ;
     }
 }
 /* !--Accesorios--! */
 .bodyAcce{
-    background-color: #fff;
+    background-color: rgb(39, 78, 102);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
+    color: black;
 }
 .accesorios{
     display: flex;
@@ -323,11 +329,12 @@ h1{
     height: 21rem;
     transition: all 1s;
     margin: 1.5rem;
+    background-color: #fff;
 }
 .cardA:hover{
-    box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--webkit-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
--moz-box-shadow: 2px 2px 13px 5px rgba(54,48,48,0.71);
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
 }
 .cardA img{
     width: 15rem;
@@ -365,7 +372,7 @@ h1{
 }
 /* !--Contactos--! */
 .bodyCon{
-    background-color: #fff;
+    background-color: rgb(39, 78, 102);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
 .form{
@@ -375,6 +382,7 @@ h1{
     text-align: center;
 }
 .form h2{
+    color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media  screen and (min-width:760px){
