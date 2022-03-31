@@ -62,6 +62,17 @@ body{
         "navpags navpags navpags" ;
     }
 }
+@media screen and (max-width:570px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "contenprom contenprom "
+	    "contenprod contenprod "
+        "seccion3 seccion3 "
+        "navpags navpags" ;
+    }
+}
 @media screen and (min-width:570px) {
     .main{
         grid-template-columns: 1fr 1fr;
@@ -290,10 +301,22 @@ body{
     text-align:unset;
     grid-area:latex ;
 }
+@media screen and (min-width:768px) {
+    .seccion3{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "endymas prodmad"
+            "endymas membr"
+            "revtext latex"
+            "esmsint latex" ;
+    }
+}
+
 @media screen and (min-width:570px) {
     .seccion3{
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(8, auto);
         grid-template-areas:
             "endymas"
             "endymas" 
