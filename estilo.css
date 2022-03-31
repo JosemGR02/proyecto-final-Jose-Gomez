@@ -43,29 +43,29 @@ body{
 @media screen and (min-width:760px) {
     .contenedor {
         grid-template-columns: repeat(2, 1fr);
-	    grid-template-rows: repeat(5, auto);
+	    grid-template-rows: repeat(4, auto);
         grid-template-areas:
         "header header"
 	    "main main"
-        "main main"
         "main main"
 		"footer footer" ;
     }
 }
 @media screen and (max-width:760px) {
     .main {
-        grid-template-columns: 1fr ;
+        grid-template-columns: repeat(3, 1fr);
 	    grid-template-rows: repeat(3, auto);
         grid-template-areas:
-        "contenprom"
-	    "contenprod"
-        "seccion3" ;
+        "contenprom contenprom contenprom"
+	    "contenprod contenprod contenprod"
+        "seccion3 seccion3 seccion3"
+        "navpags navpags navpags" ;
     }
 }
 @media screen and (min-width:570px) {
     .main{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4 1fr);
+        grid-template-rows: repeat(11, auto);
         grid-template-areas:
         "prom prom"
         "prod prod"
@@ -76,7 +76,8 @@ body{
         "latex" 
         "membr"
         "revtext"
-        "revtext" ;
+        "revtext"
+        "navpags" ;
     }
 }
 /* !--comienza index--! */
@@ -395,11 +396,11 @@ h1{
 }
 @media  screen and (min-width:570px){
     .formulario{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
-        "form"
-        "maps" ;
+        "form maps" ;
+        flex-direction:column;
     }
 }
 
