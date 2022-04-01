@@ -31,10 +31,10 @@ body{
     grid-area: main;
 }
 .contenedor .anchofooter{
-	grid-area: footer;
+    grid-area: footer;
 }
 
-@media screen and (min-width:760px) {
+@media screen and (min-width:570px) {
     .contenedor {
         grid-template-columns: repeat(2, 1fr);
 	    grid-template-rows: repeat(5, auto);
@@ -46,7 +46,7 @@ body{
 		"footer footer" ;
     }
 }
-@media screen and (max-width:760px) {
+@media screen and (max-width:768px) {
     .main {
         grid-template-columns: 1fr ;
 	    grid-template-rows: repeat(3, auto);
@@ -59,11 +59,11 @@ body{
 }
 @media screen and (min-width:570px) {
     .main{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(11, 1fr);
         grid-template-areas:
-        "prom prom"
-        "prod prod"
+        "prom"
+        "prod"
         "endymas"
         "endymas" 
         "prodmad"
@@ -93,6 +93,7 @@ body{
     flex-direction: row;
     margin-left: 4.3rem;
     gap: 5rem;
+    grid-area: contenprom;
     &_prom{
         display:flex;
         flex-direction:row;
@@ -128,6 +129,7 @@ body{
     flex-wrap: wrap;
     margin-left: 4.2rem;
     gap: 5rem;
+    grid-area: contenprod;
     &_prod{
         display:flex;
         flex-wrap: wrap;
@@ -156,6 +158,7 @@ body{
     flex-direction: row;
     margin-left: -1.2rem;
     gap: 5rem;
+    grid-area: seccion3;
     &_padre{
         width: 90% ;
         margin: 20px auto;
@@ -232,7 +235,9 @@ body{
         }
     }
 }
-
+.navpags{
+    grid-area: navpags;
+}
 .imcaru{
     width: 1800px;
     height: 650px;
@@ -252,10 +257,9 @@ footer{
         margin-left: 5px;
         margin-right: 5px;
         color: $blanco;
-
-    &:hover {
-        color: $hover;
-    }
+        &:hover {
+            color: $hover;
+        }
 }
 
 .bi-facebook{

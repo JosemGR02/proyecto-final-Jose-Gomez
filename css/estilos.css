@@ -58,7 +58,7 @@ body {
   grid-area: footer;
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 570px) {
   .contenedor {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -68,7 +68,7 @@ body {
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
   .main {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -80,11 +80,11 @@ body {
 
 @media screen and (min-width: 570px) {
   .main {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (1fr)[4];
-        grid-template-rows: repeat(4 1fr);
-        grid-template-areas: "prom prom" "prod prod" "endymas" "endymas"  "prodmad" "esmsint" "latex"  "membr" "revtext" "revtext" "navpags";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[11];
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-areas: "prom" "prod" "endymas" "endymas"  "prodmad" "esmsint" "latex"  "membr" "revtext" "revtext" "navpags";
   }
 }
 
@@ -119,6 +119,7 @@ body {
           flex-direction: row;
   margin-left: 4.3rem;
   gap: 5rem;
+  grid-area: contenprom;
 }
 
 .contenprom_prom {
@@ -176,6 +177,7 @@ body {
       flex-wrap: wrap;
   margin-left: 4.2rem;
   gap: 5rem;
+  grid-area: contenprod;
 }
 
 .contenprod_prod {
@@ -219,6 +221,7 @@ body {
           flex-direction: row;
   margin-left: -1.2rem;
   gap: 5rem;
+  grid-area: seccion3;
 }
 
 .seccion3_padre {
@@ -311,6 +314,10 @@ body {
         grid-template-rows: repeat(8, 1fr);
         grid-template-areas: "endymas" "endymas"  "prodmad" "esmsint" "latex"  "membr" "revtext" "revtext";
   }
+}
+
+.navpags {
+  grid-area: navpags;
 }
 
 .imcaru {
@@ -580,11 +587,15 @@ footer .redes .bi-whatsapp_:hover {
 
 @media screen and (min-width: 570px) {
   .formulario {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "form" "maps";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "form maps";
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
