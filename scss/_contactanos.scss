@@ -1,0 +1,137 @@
+.bodyCon{
+    background-color: $azulfond;
+}
+.h2{
+    color:  $negro;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 3rem;
+    margin-block-end: 3rem;
+}
+
+.pintucon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.pintureria {
+    width: 50% ;
+    height: 450px ;
+}
+@media  screen and (min-width:570px){
+    .pintucon{
+        flex-direction: column;
+    }
+}
+.form{
+    display: flex;
+    flex-direction: wrap;
+    justify-content:center;
+    text-align: center;
+    grid-template-areas: form;
+}
+.maps{
+    display: flex;
+    flex-direction: wrap;
+    justify-content:center;
+    grid-template-areas: maps;
+}
+
+.textsucur{
+    margin-top: 3rem;
+    margin-block-end: 3rem;
+}
+
+.fotopintureria{
+    width: 50%;
+    height: 500px;
+    border-radius: 3rem;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: $azulfoot;
+    color: $blanco;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    .redes{
+        display: inline-block;
+        .bi-facebook{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: blue;
+            }
+        }
+        .bi-instagram{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: rgb(121, 23, 121);
+            }
+        }
+        .bi-whatsapp{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: green;
+            }
+        }
+    }
+}
+label{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.imcaru{
+    width: 1800px;
+    height: 650px;
+}
+@mixin redes ($hover) {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: $blanco;
+    &:hover {
+        color: $hover;
+    }
+}
+.bi-facebook{
+    @include redes($fb);
+}
+.bi-instagram{
+    @include redes($wp);
+}
+.bi-whatsapp{
+    @include redes($insta);
+}
+/* !--animaciones--! */
+.caja{
+    width: 60px;
+    height: 60px;
+    margin: 5px auto;
+    display: inline-block;
+    &:hover{
+        transform: rotate(30deg);
+    }
+}
+
+.aninav{
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+    display: inline-block;
+}
+.tran1{
+    transition: all 1s ease;
+    &:hover{
+        width: 200px;
+    }
+}

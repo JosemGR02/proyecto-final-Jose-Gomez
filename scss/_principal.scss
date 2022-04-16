@@ -1,0 +1,256 @@
+body{
+    background-color: $azulfond;
+}
+
+/* !--comienza index--! */
+
+.encabezado{
+    background-image: url(/media/Dormitorio-verde-foto4.jpg);
+    height: 90vh;
+    background-size: cover;
+}
+.carousel-column{
+    height:650px;
+    width:auto;
+    margin:0 auto;
+}
+.promocionesyproductos{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenprom{
+    display:flex;
+    flex-direction: row;
+    margin-left: -0.6rem;
+    gap: 5rem;
+    grid-area: contenprom;
+    .prom{
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        width: $wcaja; 
+        height: $hcaja;
+        transition: all 1s;
+        padding: 5px;
+        margin: 1.5rem;
+        background-color: $blanco;
+        &_img{
+            width: $wimg;
+            height: $himg;
+        }
+        &:hover{
+            box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        -webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        -moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        }
+    }
+}
+
+.textos{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: $negro;
+    text-decoration: solid;
+} 
+.contenprod{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin-left: -0.6rem;
+    gap: 5rem;
+    grid-area: contenprod;
+    .prod{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:row;
+        width: $wcaja; 
+        height: $hcaja;
+        transition: all 1s;
+        margin: 1.5rem;
+        padding: 5px;
+        background-color: $blanco;
+        &_img{
+            width:  $wimg;
+            height: $himg;
+            position: absolute;
+        }
+        &:hover{
+            box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        -webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        -moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+        }
+    }
+}
+
+.seccion3{
+    display:flex;
+    flex-direction: row;
+    margin-left: -1.2rem;
+    gap: 5rem;
+    grid-area: seccion3;
+    .padre{
+        width: 90% ;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "endymas prodmad"
+            "endymas membr"
+            "revtext latex"
+            "esmsint latex" ;
+            .hijos{
+                margin: 5px;
+                padding: 5px;
+                border-radius: 3px;
+                width: 700px auto ;
+                height: 450px auto;
+                transition: all 1s;
+                .endymas{
+                    color:  $negro;
+                    width: $wgridg;
+                    height:$hgridg;
+                    background-image: url("/media/griddd/masilla2.jpg");
+                    text-align: end;
+                    grid-area: endymas;
+                }
+                .prodmad{
+                    color:  $negro;
+                    background-image: url("../media/griddd/maderaffff.jpg");
+                    text-align: end;
+                    grid-area: prodmad;
+                }
+                .membr{
+                    color:  $negro;
+                    background-image: url("../media/griddd/membrana\ impermeableggggg.jpg");
+                    text-align:end;
+                    grid-area: membr;
+                }
+                .esmsint{
+                    color:  $negro;
+                    background-image: url("../media/griddd/esmalteSintetico.jpg");
+                    text-align: end;
+                    grid-area: esmsint;
+                }
+                .revtext{
+                    color:  $negro;
+                    background-image: url("../media/griddd/revestimientogggggg.jpg");
+                    text-align: end;
+                    grid-area: revtext;
+                }
+                .latex{
+                    color:  $negro;
+                    width: $wgridg;
+                    height:$hgridg;
+                    background-image: url("../media/griddd/latex-exterior\ eww.jpg");
+                    text-align:unset;
+                    grid-area:latex ;
+                }
+            }
+    }
+}
+.navpags{
+    grid-area: navpags;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: $azulfoot;
+    color: $blanco;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    .redes{
+        display: inline-block;
+        .bi-facebook{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: blue;
+            }
+        }
+        .bi-instagram{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: rgb(121, 23, 121);
+            }
+        }
+        .bi-whatsapp{
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: $blanco;
+            &:hover{
+                color: green;
+            }
+        }
+    }
+}
+.anchofooter{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "logof redes" ;
+}
+
+@mixin redes ($hover) {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        color: $blanco;
+        &:hover {
+            color: $hover;
+        }
+}
+
+.bi-facebook{
+    @include redes($fb);
+}
+.bi-instagram{
+    @include redes($wp);
+}
+.bi-whatsapp{
+    @include redes($insta);
+}
+
+/* !--animaciones--! */
+.caja{
+    width: 60px;
+    height: 60px;
+    margin: 5px auto;
+    display: inline-block;
+    &:hover{
+        transform: rotate(30deg);
+    }
+}
+
+.aninav{
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+    display: inline-block;
+}
+.tran1{
+    transition: all 1s ease;
+    &:hover{
+        width: 200px;
+    }
+}
+.btn-lav{
+    color: $blanco;
+    background-color: rgb(1, 74, 134) ;
+    border-color: rgb(1, 74, 134) ;
+}
