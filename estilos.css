@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(39, 78, 102);
+    font-family: 'Exo 2', sans-serif;
+}
+/* !--contenedor pag principal--! */
+.contenedor {
+	width: 100%;
+	display: grid;
+	gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main"
+    "footer footer footer" ;
+}
+.contenedor >div,
+.contenedor .header,
+.contenedor .main,
+.contenedor .footer,
+.contenedor .header{
+	grid-area: header;
+    
+}
+.contenedor .main{
+    min-height: 100%;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content:space-around;
+    grid-area: main;
+}
+.contenedor .anchofooter{
+	grid-area: footer;
+}
+
+@media screen and (min-width:570px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "header header"
+	    "main main"
+        "main main"
+		"footer footer" ;
+    }
+}
+@media screen and (max-width:760px) {
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+        "contenprom contenprom contenprom"
+	    "contenprod contenprod contenprod"
+        "seccion3 seccion3 seccion3"
+        "navpags navpags navpags" ;
+    }
+}
+@media screen and (max-width:570px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+	    grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+        "contenprom contenprom "
+	    "contenprod contenprod "
+        "seccion3 seccion3 "
+        "navpags navpags" ;
+    }
+}
+@media screen and (min-width:570px) {
+    .main{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11, auto);
+        grid-template-areas:
+        "prom prom"
+        "prod prod"
+        "endymas"
+        "endymas" 
+        "prodmad"
+        "esmsint"
+        "latex" 
+        "membr"
+        "revtext"
+        "revtext"
+        "navpags" ;
+    }
+}
+/* !--comienza index--! */
+
+.encabezado{
+    background-image: url(/media/Dormitorio-verde-foto4.jpg);
+    height: 90vh;
+    background-size: cover;
+}
+.logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.menu{
+    background: linear-gradient(0deg, rgb(10, 57, 58) 0%, rgb(124, 56, 56) 64%);
+    background-size: cover;
+    list-style: none;
+    background-color: rgb(26, 25, 25);
+    text-align: center;
+}
+.menu ul{
+    list-style: none;
+    padding: 1.2rem;
+}
+.menu ul li{
+    display: inline-block;
+    background-color: rgba(255, 228, 196, 0.822);
+    position: relative;
+    font-size: 1.3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+.menu ul li a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration:overline;
+    display: inline-block;
+    color: rgb(156, 126, 87);
+}
+.menu ul li:hover ul{
+    display: block;
+    background-color: rgba(184, 154, 74, 0.582);
+}
+.menu ul li a:hover{
+    color: #503737;
+    font-weight:bold;
+}
+.promocionesyproductos{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.promociones{
+    display: flex;
+    flex-direction:column ;
+    overflow: auto;
+    color: black;
+}
+.promociones h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+    padding: 2rem;
+}
+
+.contenprom{
+    display:flex;
+    flex-direction: row;
+    margin-left: 4.3rem;
+    gap: 5rem;
+}
+
+.prom{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 16rem; 
+    height: 21rem;
+    transition: all 1s;
+    padding: 5px;
+    margin: 1.5rem;
+    background-color: #fff;
+}
+.prom:hover{
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+}
+.prom img{
+    width: 15rem;
+    height: 16rem;
+}
+.textos{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    color:black;
+    text-decoration: solid;
+} 
+.ofertas{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkred;
+}
+.contenprod{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin-left: 4.2rem;
+    gap: 5rem;
+}
+.productos{
+    display: flex;
+    flex-direction:column ;
+    overflow: auto;
+    color: black;
+    align-items: center;
+}
+.productos h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+}
+.prod{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    width: 16rem; 
+    height: 21rem;
+    transition: all 1s;
+    margin: 1.5rem;
+    padding: 5px;
+    background-color: #fff;
+}
+.prod:hover{
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+}
+.prod img{
+    width: 15rem;
+    height: 16rem;
+}
+.img{
+    position: absolute;
+}
+
+.seccion3{
+    display:flex;
+    flex-direction: row;
+    margin-left: -1.2rem;
+    gap: 5rem;
+}
+
+.padre{
+    width: 90% ;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "endymas prodmad"
+        "endymas membr"
+        "revtext latex"
+        "esmsint latex" ;
+}
+.hijos{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    width: 700px auto ;
+    height: 450px auto;
+    transition: all 1s;
+}
+
+.endymas{
+    color: black;
+    width: 550px;
+    height: 400px;
+    background-image: url(/media/griddd/masilla2.jpg);
+    text-align: end;
+    grid-area: endymas;
+}
+.prodmad{
+    color: black;
+    background-image: url(/media/griddd/maderaffff.jpg);
+    text-align: end;
+    grid-area: prodmad;
+}
+.membr{
+    color: black;
+    background-image: url(/media/griddd/membrana\ impermeable.jpg);
+    text-align:end;
+    grid-area: membr;
+}
+.esmsint{
+    color: black;
+    background-image: url(/media/griddd/esmalteSintetico.jpg);
+    text-align: end;
+    grid-area: esmsint;
+}
+.revtext{
+    color: black;
+    background-image: url(/media/griddd/revestimientogggggg.jpg);
+    text-align:end;
+    grid-area: revtext;
+}
+.latex{
+    color: black;
+    width: 550px;
+    height: 400px;
+    background-image: url(/media/griddd/latex-exterior\ eww.jpg);
+    text-align:unset;
+    grid-area:latex ;
+}
+@media screen and (min-width:768px) {
+    .seccion3{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "endymas prodmad"
+            "endymas membr"
+            "revtext latex"
+            "esmsint latex" ;
+    }
+}
+
+@media screen and (min-width:570px) {
+    .seccion3{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "endymas"
+            "endymas" 
+            "prodmad"
+            "esmsint"
+            "latex" 
+            "membr"
+            "revtext"
+            "revtext" ;
+    }
+}
+/* !--Accesorios--! */
+.bodyAcce{
+    background-color: rgb(39, 78, 102);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: black;
+}
+.accesorios{
+    display: flex;
+    flex-direction:row ;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.cardA{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: space-around;
+    width: 16rem; 
+    height: 21rem;
+    transition: all 1s;
+    margin: 1.5rem;
+    background-color: #fff;
+}
+.cardA:hover{
+    box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-webkit-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+-moz-box-shadow: 2px 2px 13px 5px rgb(0, 0, 0);
+}
+.cardA img{
+    width: 15rem;
+    height: 16rem;
+}
+.textosA{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    color:black;
+    text-decoration: solid;
+} 
+
+@media screen and (min-width:760px) {
+    .accesorios{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas:
+        "cardA cardA cardA"
+        "cardA cardA cardA"
+        "cardA cardA cardA"
+        "cardA cardA" ;
+    }
+}
+@media screen and (min-width:570px) {
+    .accesorios{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas:
+        "cardA cardA"
+        "cardA cardA"
+        "cardA cardA"
+        "cardA cardA" ;
+    }
+}
+/* !--Contactos--! */
+.bodyCon{
+    background-color: rgb(39, 78, 102);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+.form{
+    display: flex;
+    flex-direction: wrap;
+    justify-content:center;
+    text-align: center;
+}
+.form h2{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+@media  screen and (min-width:760px){
+    .formulario{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "form maps" ;
+    }
+}
+@media  screen and (min-width:570px){
+    .formulario{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "form maps" ;
+        flex-direction:column;
+        align-content: center;
+    }
+}
+
+/* !--Bootstrap--! */
+.imcaru{
+    width: 1800px;
+    height: 650px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(10, 5, 39);
+    color: rgb(250, 250, 250);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.redes{
+    display: inline-block;
+}
+.bi-facebook{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+}
+.bi-instagram{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+}
+.bi-whatsapp{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+}
+.bi-facebook:hover{
+    color: blue;
+}
+.bi-instagram:hover{
+    color: rgb(121, 23, 121);
+}
+.bi-whatsapp:hover{
+    color: green;
+}
+/* !--animaciones--! */
+.caja{
+    width: 60px;
+    height: 60px;
+    margin: 5px auto;
+    display: inline-block;
+}
+.rotate:hover{
+    transform: rotate(30deg);
+}
+.aninav{
+    width: 40px;
+    height: 40px;
+    margin: 5px auto;
+    display: inline-block;
+}
+.tran1{
+    transition: all 1s ease;
+}
+.tran1:hover{
+    width: 200px;
+}
+.btn-lav{
+    color: #fff;
+    background-color: rgb(1, 74, 134) ;
+    border-color: rgb(1, 74, 134) ;
+}
